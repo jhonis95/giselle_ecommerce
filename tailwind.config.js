@@ -6,7 +6,11 @@ module.exports = {
     `./src/templates/**/*.{js,jsx,ts,tsx}`
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        'urbanist':['sans-serif']
+      }
+    },
   },
   plugins: [],
 }

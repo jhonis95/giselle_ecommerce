@@ -1,13 +1,14 @@
 import * as React from "react"
 import Navbar from "../templates/navbar"
 import Home from "../components/home"
+import Main from "../components/main"
 
 const IndexPage = () => {
   return (
     <>
       <Navbar/>
       <Home/>
-      <main></main>
+      <Main/>
       <footer></footer>
     </>
   )
