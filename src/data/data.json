@@ -1,0 +1,33 @@
+{
+    "categories":[
+        {   
+            "name":"dress",
+            "icon":""    
+        },{
+            
+            "name":"Shirt",
+            "icon":""
+        }
+        ,{
+            
+            "name":"Pants",
+            "icon":""
+        },{
+            
+            "name":"Shots",
+            "icon":""
+        },{
+            
+            "name":"Underwear",
+            "icon":""
+        },{
+            
+            "name":"Bra",
+            "icon":""
+        }
+    ],
+    "genders":{
+        "female":"Female",
+        "male":"Male"
+    }
+}
