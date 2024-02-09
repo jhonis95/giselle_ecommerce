@@ -1,9 +1,8 @@
 import * as React from "react"
 import Categories from "./categories";
-import ClothesCard from "./clothesCard";
+import CardsContainer from "./cardsContainer";
 import { useStaticQuery, graphql } from "gatsby"
 import { useState } from "react";
-import { useEffect } from "react";
 
 const Main=()=>{
     const data= useStaticQuery(graphql`
@@ -17,42 +16,30 @@ const Main=()=>{
           }
     `
     )
-    const [clothes,setClothes]=useState({})
-    const [loading, setLoading] = useState(true); 
-    useEffect(()=>{
-        const fetchData= async()=>{
-            try{
-                const response= await fetch('http://localhost:1337/api/products?populate=*')
-                const data = await response.json()
-                setClothes(data)
-                setLoading(false)
-            }
-            catch{
-                console.log('err')
-            }
-        }
-        fetchData()
-    },[])
+    const [categorie, setCategorie]=useState('Dress')
     return(
         <main>
-            <section className=" w-full">
-                <div className=" flex gap-[230px]">
-                    <button>
+            <section className=" w-full mt-12">
+                <h1>{categorie}</h1>
+                <div className=" flex gap-[230px] ml-40">
+                    <button className=" font-urbanist font-bold text-4xl text-pink-500">
                         {data.dataJson.genders.female}
                     </button>
-                    <button>
+                    <button className=" font-urbanist font-bold text-4xl text-pink-500">
                         {data.dataJson.genders.male}
                     </button>
                 </div>
-                <Categories/>
-                <section>
-                    <>
-                        {
-                            loading===true?
-                            '':<ClothesCard data={clothes}/>
-                        }
-                    </>
-                </section>
+                <div className=" flex justify-end mr-40">
+                    <button className="font-urbanist font-bold text-lg text-pink-500">
+                        see all
+                    </button>
+                </div>
+                <Categories
+                    setCategorie={setCategorie}
+                />
+                <CardsContainer
+                    categorie={categorie}
+                />
             </section>
         </main>
     )

@@ -1,29 +1,29 @@
 {
     "categories":[
         {   
-            "name":"dress",
-            "icon":""    
+            "name":"Dress",
+            "icon":"../static/f45f0f211e19ab0934f7a643e5142cce/dress.svg"    
         },{
             
             "name":"Shirt",
-            "icon":""
+            "icon":"../static/21995d0cac01da321d76c0ca6e80f808/shirt.svg"
         }
         ,{
             
             "name":"Pants",
-            "icon":""
+            "icon":"../static/09cb9e63aa6397f58680daa80ecb665f/pants.svg"
         },{
             
             "name":"Shots",
-            "icon":""
+            "icon":"../static/5e240e236b7a45fcbe02d4c8610af452/shorts.svg"
         },{
             
             "name":"Underwear",
-            "icon":""
+            "icon":"../static/c51c93f338b135542b0d9335736a5783/underwear.svg"
         },{
             
             "name":"Bra",
-            "icon":""
+            "icon":"../static/e43decc8a9b7261bbda06d42eee7466a/bra.svg"
         }
     ],
     "genders":{

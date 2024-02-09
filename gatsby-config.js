@@ -19,6 +19,14 @@ module.exports = {
       options: {
         path: `./src/data/`,
       },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "categories_icons",
+        "path": "./src/images/categories_icons"
+      },
+      __key: "categories_icons"
     }
   ]
 };

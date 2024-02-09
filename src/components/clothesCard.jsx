@@ -34,9 +34,9 @@ const CardImages=({img})=>{
 
 const ClothesCard=({data})=>{
     return(
-        <div className=" flex flex-wrap gap-11 justify-center">
+        <div className=" flex flex-wrap gap-11 justify-center max-w-[1172px]">
             {
-                data.data.map((item)=>{
+                data.attributes.products.data.map((item)=>{
                     return(
                         <div className=" bg-pink-500 rounded max-h-[452px] max-w-[357px]">
                             <CardImages
