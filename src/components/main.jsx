@@ -20,7 +20,6 @@ const Main=()=>{
     return(
         <main>
             <section className=" w-full mt-12">
-                <h1>{categorie}</h1>
                 <div className=" flex gap-[230px] ml-40">
                     <button className=" font-urbanist font-bold text-4xl text-pink-500">
                         {data.dataJson.genders.female}

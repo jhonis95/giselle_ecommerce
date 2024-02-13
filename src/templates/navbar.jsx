@@ -17,6 +17,7 @@ const Navbar=()=>{
                     <StaticImage
                         src="../images/magnifying-glass-solid.svg"
                         className=" w-4 h-4"
+                        alt="search-icon"
                     />
                 </form>
             </section>
@@ -30,11 +31,13 @@ const Navbar=()=>{
                     <button className=" border bg-orange-200 w-[39px] h-[39px] rounded-full flex justify-center items-center drop-shadow-lg">
                         <StaticImage
                             src="../images/bag-shopping-solid.svg"
+                            alt="bag-icon"
                         />
                     </button>
                     <button className=" border bg-orange-200 w-[39px] h-[39px] rounded-full flex justify-center items-center drop-shadow-lg">
                         <StaticImage
                             src="../images/user-regular.svg"
+                            alt="user-icon"
                         />
                     </button>
                 </div>

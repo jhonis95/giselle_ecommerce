@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { v4 as uuidv4 } from 'uuid';
 
 const CategoriesCard=({title,icon,setCategorie})=>{
     const handleclick=()=>{
@@ -35,6 +36,7 @@ const Categories=({setCategorie})=>{
                                 setCategorie={setCategorie}
                                 title={categorie.name}
                                 icon={categorie.icon}
+                                key={uuidv4()}
                             />
                         )
                     })

@@ -15,22 +15,27 @@ const Home=()=>{
                     <StaticImage
                         className=" absolute top-20 left-1/3"
                         src="../images/Vector.svg"
+                        alt="bg-vector"
                     />
                     <StaticImage
                         className=" absolute bottom-5 left-1/3"
                         src="../images/Vector-1.svg"
+                        alt="bg-vector"
                     />
                     <StaticImage
                         className=" absolute left-0 bottom-0"
                         src="../images/Vector-2.svg"
+                        alt="bg-vector"
                     />
                     <StaticImage
                         className=" absolute right-0 bottom-4"
                         src="../images/Vector-3.svg"
+                        alt="bg-vector"
                     />
                     <StaticImage
                         className=" absolute right-0 bottom-0"
                         src="../images/Fashion-bg.png"
+                        alt="bg-vector"
                     />
                 </div>
             </section>
