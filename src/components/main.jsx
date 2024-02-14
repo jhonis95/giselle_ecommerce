@@ -16,7 +16,7 @@ const Main=()=>{
           }
     `
     )
-    const [categorie, setCategorie]=useState('Dress')
+    const [categorie, setCategorie]=useState('Bra')
     return(
         <main>
             <section className=" w-full mt-12">

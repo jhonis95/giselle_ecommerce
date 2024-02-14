@@ -7,7 +7,7 @@ const CategoriesCard=({title,icon,setCategorie})=>{
         setCategorie(title)
     }
     return(
-        <button onClick={handleclick} className=" rounded-xl bg-pink-500 w-[184px] h-[176px] flex flex-col gap-6 justify-center items-center hover:scale-105">
+        <button onClick={handleclick} className=" rounded-xl bg-pink-500 w-[184px] h-[176px] flex flex-col gap-6 justify-center items-center hover:scale-105 drop-shadow-lg">
             <img src={icon} alt="categories-icons" />
             <h5 className=" font-urbanist font-bold text-2xl text-pink-200">{title}</h5>
         </button>
