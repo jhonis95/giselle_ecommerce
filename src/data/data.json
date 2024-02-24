@@ -1,8 +1,8 @@
 {
     "categories":[
         {   
-            "name":"Dress",
-            "icon":"../static/f45f0f211e19ab0934f7a643e5142cce/dress.svg"    
+            "name":"Casual",
+            "icon":"../static/7037db776882785a6c09231af8d1cfeb/casual.svg"    
         },{
             
             "name":"Shirt",
@@ -10,15 +10,15 @@
         }
         ,{
             
-            "name":"Pants",
-            "icon":"../static/09cb9e63aa6397f58680daa80ecb665f/pants.svg"
+            "name":"Sport",
+            "icon":"../static/1e42628f145989bc906b76b837379e9f/sport-wear.svg"
         },{
             
-            "name":"Shots",
-            "icon":"../static/5e240e236b7a45fcbe02d4c8610af452/shorts.svg"
+            "name":"Pijamas",
+            "icon":"../static/325176c440bd6bfb9547569e8b643f14/pijama.svg"
         },{
             
-            "name":"Underwear",
+            "name":"Panties",
             "icon":"../static/c51c93f338b135542b0d9335736a5783/underwear.svg"
         },{
             
@@ -29,5 +29,26 @@
     "genders":{
         "female":"Female",
         "male":"Male"
-    }
+    },
+    "brand":[
+        {
+            "name":"2rio",
+            "icon":"/static/288dcd9dc6dc1ad762c0a633f440df3a/2rios.png"
+        },{
+            "name":"kalua",
+            "icon":"/static/e675b528fd0a8c3fd3a8cb3b8c389cdc/kalua.jpg"  
+        },{
+            "name":"kyly",
+            "icon":"/static/58c9e97aa7c889ad3393152332164ba4/kyly2.jpg"
+        },{
+            "name":"malwee",
+            "icon":"/static/dddf6ff97a1e5732cdf9a3e94f364bc2/malwee.png"  
+        },{
+            "name":"ronina",
+            "icon":"/static/f74bfae7d3de1c33d9442192f6ae4e3e/rondina.png"  
+        },{
+            "name":"plié",
+            "icon":"/static/4dfe4c9f159af86eb32e6e99e8a4f5dc/plié.png"
+        }
+    ]
 }

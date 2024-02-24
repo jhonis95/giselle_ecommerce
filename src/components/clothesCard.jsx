@@ -2,10 +2,13 @@ import * as React from "react"
 import { useState, useEffect } from "react"
 
 const CardImages=({img,brand})=>{
-    const [images,setImages]=useState({
-        imgLink1:`http://localhost:1337${img[0].attributes.url}`,
-        imgLink2:`http://localhost:1337${img[1].attributes.url}`
-    })
+    const [images,setImages]=useState({})
+    useEffect(()=>{
+        setImages({
+            imgLink1:`http://localhost:1337${img[0].attributes.url}`,
+            imgLink2:`http://localhost:1337${img[1].attributes.url}`
+        })
+    },[img])
     const [showMainImg,setShowMainImg]=useState(true)
     const handleOver=()=>{
         setShowMainImg(false)
@@ -19,7 +22,7 @@ const CardImages=({img,brand})=>{
                 showMainImg===true?
                 <div className=" relative">
                     <img
-                        className=" object-cover w-full h-[347px]"
+                        className=" object-fill w-full h-[347px]"
                         onMouseOver={handleOver}
                         src={images.imgLink1} alt="clothe" 
                     />
@@ -29,7 +32,7 @@ const CardImages=({img,brand})=>{
                 </div>:
                 <div className=" relative">
                     <img
-                        className=" object-cover w-full h-[347px]"
+                        className=" object-fill w-full h-[347px]"
                         onMouseLeave={handleLeave}
                         src={images.imgLink2} alt="clothe1" 
                     />
@@ -51,7 +54,6 @@ const ClothesCard=({categorie})=>{
         return data
     }
     const handleText=(text)=>{
-        console.log(typeof(text))
         const finalSentence=text.toLowerCase().replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
         return finalSentence
     }
@@ -72,7 +74,7 @@ const ClothesCard=({categorie})=>{
                         setClothes(data.data[2])
                         setLoading(false)
                         break;
-                    case 'Pajamas':
+                    case 'Pijamas':
                         setClothes(data.data[3])
                         setLoading(false)
                         break;
@@ -84,8 +86,8 @@ const ClothesCard=({categorie})=>{
                         setClothes(data.data[5])
                         setLoading(false)
                         break;
-                    case 'Dress':
-                        setClothes(data.data[5])
+                    case 'Casual':
+                        setClothes(data.data[6])
                         setLoading(false)
                         break;
                     default:

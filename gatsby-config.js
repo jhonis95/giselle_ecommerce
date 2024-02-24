@@ -27,6 +27,14 @@ module.exports = {
         "path": "./src/images/categories_icons"
       },
       __key: "categories_icons"
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "categories_icons",
+        "path": "./src/images/brands"
+      },
+      __key: "categories_icons"
     }
   ]
 };

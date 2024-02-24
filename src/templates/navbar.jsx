@@ -7,7 +7,12 @@ const Navbar=()=>{
     return(
         <nav className=" bg-pink-500 flex flex-row justify-evenly h-[49px] w-full items-center fixed z-50">
             <section className="w-[400px]">
-                <div>
+                <div className="flex gap-5 items-center">
+                    <img 
+                        className="w-[50px]"
+                        src="/static/81d2d323d083723c63e69a2c834b0e47/logo.svg" 
+                        alt="logo" 
+                    />
                     <h2 className=" drop-shadow-lg font-['urbanist'] text-4xl font-bold text-pink-300">Giselle</h2>
                 </div>
             </section>
@@ -23,9 +28,9 @@ const Navbar=()=>{
             </section>
             <section className="flex justify-between w-[400px] gap-12">
                 <ul className=" flex w-full justify-evenly items-center gap-8">
-                    <Link className=" text-2xl font-['urbanist'] font-extrabold text-red-400 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]" to="/">Home</Link>
-                    <Link className=" text-2xl font-['urbanist'] font-extrabold text-red-400 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]" to="/catalogo">Catalogo</Link>
-                    <Link className=" text-2xl font-['urbanist'] font-extrabold text-red-400 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]" to="/contato">Contato</Link>
+                    <Link className=" text-2xl font-['urbanist'] font-extrabold text-pink-300 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]" to="/">Home</Link>
+                    <Link className=" text-2xl font-['urbanist'] font-extrabold text-pink-300 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]" to="/catalogo">Catalogo</Link>
+                    <Link className=" text-2xl font-['urbanist'] font-extrabold text-pink-300 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]" to="/contato">Contato</Link>
                 </ul>
                 <div className="flex items-center gap-x-4">
                     <button className=" border bg-orange-200 w-[39px] h-[39px] rounded-full flex justify-center items-center drop-shadow-lg">

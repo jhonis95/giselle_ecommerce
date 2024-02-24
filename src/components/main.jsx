@@ -3,6 +3,8 @@ import Categories from "./categories";
 import CardsContainer from "./cardsContainer";
 import { useStaticQuery, graphql } from "gatsby"
 import { useState } from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import Brands from "./brands";
 
 const Main=()=>{
     const data= useStaticQuery(graphql`
@@ -39,6 +41,18 @@ const Main=()=>{
                 <CardsContainer
                     categorie={categorie}
                 />
+                <section className=" flex gap-10 justify-center my-10">
+                    <StaticImage
+                        src="../images/ad2.webp"
+                        alt=""
+                    />
+                    <StaticImage
+                        src="../images/ad3.webp"
+                        alt=""
+                    />
+                </section>
+                <Brands/>
+            
             </section>
         </main>
     )
