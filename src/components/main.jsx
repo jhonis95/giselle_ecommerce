@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Brands from "./brands";
+import NewClothes from "./newClothes";
 
 const Main=()=>{
     const data= useStaticQuery(graphql`
@@ -21,7 +22,7 @@ const Main=()=>{
     const [categorie, setCategorie]=useState('Bra')
     return(
         <main>
-            <section className=" w-full mt-12">
+            <section className=" w-full my-12">
                 <div className=" flex gap-[230px] ml-40">
                     <button className=" font-urbanist font-bold text-4xl text-pink-500">
                         {data.dataJson.genders.female}
@@ -52,7 +53,14 @@ const Main=()=>{
                     />
                 </section>
                 <Brands/>
-            
+                <div className=" flex gap-[230px] ml-40 my-12">
+                    <button className=" font-urbanist font-bold text-4xl text-pink-500">
+                        New Clothes
+                    </button>
+                </div>
+                <div className="flex w-full justify-center">
+                    <NewClothes/>
+                </div>
             </section>
         </main>
     )
