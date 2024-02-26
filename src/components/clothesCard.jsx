@@ -1,84 +1,85 @@
 import * as React from "react"
-import { useState, useEffect } from "react"
+import { useState , useEffect} from "react"
 import { v4 as uuidv4 } from 'uuid';
 import CardImages from './cardImages'
+import { useStaticQuery, graphql } from "gatsby"
 
 const ClothesCard=({categorie})=>{
-    const [clothes,setClothes]=useState({})
-    const [loading, setLoading] = useState(true);
-    const fetchTest=async()=>{
-
-        const response= await fetch('http://localhost:1337/api/categories?populate[products][populate][0]=image&populate[products][populate][1]=ref_store')
-        const data = await response.json()
-        return data
-    }
+    const categorieData= useStaticQuery(graphql`
+        query categoriesItens {
+          allStrapiCategorie {
+            nodes {
+              products {
+                name
+                price
+                ref_store {
+                  Name
+                }
+                image {
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      `
+    )
+    const [clothes,setClothes]=useState(categorieData.allStrapiCategorie.nodes[0])
     const handleText=(text)=>{
         const finalSentence=text.toLowerCase().replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
         return finalSentence
     }
     useEffect(()=>{
-        const fetchData= async()=>{
-            try{
-                const data= await fetchTest()
                 switch(categorie) {
                     case 'Bra':
-                        setClothes(data.data[0])
-                        setLoading(false)
+                        setClothes(categorieData.allStrapiCategorie.nodes[0])
                         break;
                     case 'Maternity':
-                        setClothes(data.data[1])
-                        setLoading(false)
+                        setClothes(categorieData.allStrapiCategorie.nodes[1])
                         break;
                     case 'Panties':
-                        setClothes(data.data[2])
-                        setLoading(false)
+                        setClothes(categorieData.allStrapiCategorie.nodes[2])
                         break;
                     case 'Pijamas':
-                        setClothes(data.data[3])
-                        setLoading(false)
+                        setClothes(categorieData.allStrapiCategorie.nodes[3])
                         break;
                     case 'Sport':
-                        setClothes(data.data[4])
-                        setLoading(false)
+                        setClothes(categorieData.allStrapiCategorie.nodes[4])
                         break;
                     case 'Shorts':
-                        setClothes(data.data[5])
-                        setLoading(false)
+                        setClothes(categorieData.allStrapiCategorie.nodes[5])
                         break;
                     case 'Casual':
-                        setClothes(data.data[6])
-                        setLoading(false)
+                        setClothes(categorieData.allStrapiCategorie.nodes[6])
                         break;
                     default:
                         break;
                 }
-            }
-            catch{
-                console.log('err')
-            }
-        }
-        fetchData()
     },[categorie])
+    
     return(
         <div className=" flex flex-wrap gap-11 justify-center max-w-[1172px]">
             {
-                loading===false?
-                clothes.attributes.products.data.map((item)=>{
+                clothes.products.map((item)=>{
                     return(
                         <div className=" bg-pink-500 rounded h-[452px] w-[357px] drop-shadow-lg" key={uuidv4()}>
                             <CardImages
                                 key={uuidv4()}
-                                img={item.attributes.image.data}
-                                brand={item.attributes.ref_store.data.attributes.Name}
+                                img1={item.image[0].localFile.childImageSharp.gatsbyImageData}
+                                img2={item.image[1].localFile.childImageSharp.gatsbyImageData}
+                                brand={item.ref_store.Name}
                             />
                             <div className="flex flex-col gap-4 m-2">
-                                <h4 className="font-bold text-1xl font-urbanist text-pink-200 h-[48px]">{handleText(item.attributes.name)}</h4>
-                                <h6 className="font-bold text-base font-urbanist text-pink-200">G {item.attributes.price}</h6>
+                                <h4 className="font-bold text-1xl font-urbanist text-pink-200 h-[48px]">{handleText(item.name)}</h4>
+                                <h6 className="font-bold text-base font-urbanist text-pink-200">G {item.price}</h6>
                             </div>
                         </div>
                     )
                 })
-                :""
             }
         </div>
     )

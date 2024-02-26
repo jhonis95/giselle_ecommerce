@@ -15,8 +15,8 @@ const CategoriesCard=({title,icon,setCategorie})=>{
 }
 
 const Categories=({setCategorie})=>{
-    const categoriesData= useStaticQuery(graphql`
-        query categories {
+    const categoriesJsonData= useStaticQuery(graphql`
+        query categoriesJsonData {
             dataJson {
                 categories {
                     name
@@ -30,7 +30,7 @@ const Categories=({setCategorie})=>{
         <section className=" flex flex-col gap-6">
             <div className=" flex gap-[96px] justify-center my-9">
                 {
-                    categoriesData.dataJson.categories.map((categorie)=>{
+                    categoriesJsonData.dataJson.categories.map((categorie)=>{
                         return(
                             <CategoriesCard
                                 setCategorie={setCategorie}

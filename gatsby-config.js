@@ -63,16 +63,16 @@ module.exports = {
     }
   ]
 };
-exports.onCreateWebpackConfig = ({
-  stage,
-  plugins,
-}) => {
-  actions.setWebpackConfig({
-    plugins: [
-      new webpack.ProvidePlugin({
-             process: 'process/browser',
-      }),
-    ],
-    devtool: "eval-source-map"
-  })
-}
+// exports.onCreateWebpackConfig = ({
+//   stage,
+//   plugins,
+// }) => {
+//   actions.setWebpackConfig({
+//     plugins: [
+//       new webpack.ProvidePlugin({
+//              process: 'process/browser',
+//       }),
+//     ],
+//     devtool: "eval-source-map"
+//   })
+// }

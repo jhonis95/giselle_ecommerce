@@ -1,16 +1,12 @@
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as React from "react"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
-const CardImages=({img,brand})=>{
-    const [images,setImages]=useState({})
-    useEffect(()=>{
-        setImages({
-            imgLink1:`http://localhost:1337${img[0].attributes.url}`,
-            imgLink2:`http://localhost:1337${img[1].attributes.url}`
-        })
-    },[img])
+const CardImages=({img1,img2,brand})=>{
+
     const [showMainImg,setShowMainImg]=useState(true)
     const handleOver=()=>{
+        console.log("over func")
         setShowMainImg(false)
     }
     const handleLeave=()=>{
@@ -21,21 +17,32 @@ const CardImages=({img,brand})=>{
             {
                 showMainImg===true?
                 <div className=" relative">
-                    <img
-                        className=" object-fill w-full h-[347px]"
+                    <div 
                         onMouseOver={handleOver}
-                        src={images.imgLink1} alt="clothe" 
-                    />
+                        >
+                        <GatsbyImage
+                            image={getImage(img1)}
+                            className=" w-full h-[347px]"
+                            objectFit="fill"
+                            layout="constrained"
+                        />
+
+                    </div>
                     <div className=" absolute right-4 bottom-4 bg-pink-300 w-[72px] h-[53px] flex justify-center items-center">
                         <p className=" z-10 font-bold text-base font-urbanist ">{brand}</p>
                     </div>
                 </div>:
                 <div className=" relative">
-                    <img
-                        className=" object-fill w-full h-[347px]"
+                    <div 
                         onMouseLeave={handleLeave}
-                        src={images.imgLink2} alt="clothe1" 
-                    />
+                    >
+                        <GatsbyImage
+                            image={getImage(img2)}
+                            className=" object-fill w-full h-[347px]"
+                            objectFit="fill"
+                            layout="constrained"
+                        />
+                    </div>
                     <div className=" absolute right-4 bottom-4 bg-pink-300 w-[72px] h-[53px] flex justify-center items-center">
                         <p className=" z-10 font-bold text-base font-urbanist ">{brand}</p>
                     </div>

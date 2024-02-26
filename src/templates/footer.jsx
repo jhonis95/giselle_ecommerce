@@ -1,10 +1,11 @@
 import { Link } from "gatsby"
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { v4 as uuidv4 } from 'uuid';
 
 const Footer=()=>{
     const categoriesData= useStaticQuery(graphql`
-        query categories {
+        query categoriesFooter {
             dataJson {
                 categories {
                     name
@@ -31,7 +32,7 @@ const Footer=()=>{
                         {
                             categoriesData.dataJson.categories.map((categorie)=>{
                                 return(
-                                    <Link to="">{categorie.name}</Link>
+                                    <Link to="" key={uuidv4()}>{categorie.name}</Link>
                                 )
                             })
                         }
