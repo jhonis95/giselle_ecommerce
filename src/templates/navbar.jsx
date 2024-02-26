@@ -28,18 +28,18 @@ const Navbar=()=>{
             </section>
             <section className="flex justify-between w-[400px] gap-12">
                 <ul className=" flex w-full justify-evenly items-center gap-8">
-                    <Link className=" text-2xl font-['urbanist'] font-extrabold text-pink-300 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]" to="/">Home</Link>
-                    <Link className=" text-2xl font-['urbanist'] font-extrabold text-pink-300 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]" to="/catalogo">Catalogo</Link>
-                    <Link className=" text-2xl font-['urbanist'] font-extrabold text-pink-300 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]" to="/contato">Contato</Link>
+                    <Link className=" navbar-links" to="/">Home</Link>
+                    <Link className=" navbar-links" to="/cataloge">Catalogo</Link>
+                    <Link className=" navbar-links" to="/contato">Contato</Link>
                 </ul>
                 <div className="flex items-center gap-x-4">
-                    <button className=" border bg-orange-200 w-[39px] h-[39px] rounded-full flex justify-center items-center drop-shadow-lg">
+                    <button className=" btn-circle">
                         <StaticImage
                             src="../images/bag-shopping-solid.svg"
                             alt="bag-icon"
                         />
                     </button>
-                    <button className=" border bg-orange-200 w-[39px] h-[39px] rounded-full flex justify-center items-center drop-shadow-lg">
+                    <button className=" btn-circle">
                         <StaticImage
                             src="../images/user-regular.svg"
                             alt="user-icon"
