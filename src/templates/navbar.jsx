@@ -8,9 +8,9 @@ const Navbar=()=>{
         <nav className=" bg-pink-500 flex flex-row justify-evenly h-[49px] w-full items-center fixed z-50">
             <section className="w-[400px]">
                 <div className="flex gap-5 items-center">
-                    <img 
+                    <StaticImage
+                        src="../images/categories_icons/logo.svg" 
                         className="w-[50px]"
-                        src="/static/81d2d323d083723c63e69a2c834b0e47/logo.svg" 
                         alt="logo" 
                     />
                     <h2 className=" drop-shadow-lg font-['urbanist'] text-4xl font-bold text-pink-300">Giselle</h2>
