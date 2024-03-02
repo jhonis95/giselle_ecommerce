@@ -1,14 +1,19 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { v4 as uuidv4 } from 'uuid';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const Brands=()=>{
     const brandData= useStaticQuery(graphql`
         query brandData {
             dataJson {
               brand {
-                icon
                 name
+                image {
+                  childImageSharp {
+                    gatsbyImageData(formats: WEBP)
+                  }
+                }
               }
             }
           }
@@ -19,11 +24,16 @@ const Brands=()=>{
             {
                 brandData.dataJson.brand.map((item)=>{
                     return(
-                        <img
-                            key={uuidv4()}
-                            className=" w-[10%] h-max aspect-square object-contain mix-blend-color-burn"
-                            src={item.icon} 
-                            alt={`icon-${item.name}`} 
+                        <GatsbyImage
+                            key={uuidv4()} 
+                            style={{
+                                mixBlendMode:"color-burn",
+                                aspectRatio: 1/1,
+                                width:"10%"
+                            }} 
+                            objectFit="contain"
+                            image={getImage(item.image.childImageSharp.gatsbyImageData)} 
+                            alt={`image-${item.name}`}
                         />
                     )
                 })

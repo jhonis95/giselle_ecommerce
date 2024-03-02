@@ -2,7 +2,7 @@
     "categories":[
         {   
             "name":"Casual",
-            "icon":"../static/7037db776882785a6c09231af8d1cfeb/casual.svg"    
+            "icon":"../images/7037db776882785a6c09231af8d1cfeb/casual.svg"    
         }
         ,{
             
@@ -29,22 +29,22 @@
     "brand":[
         {
             "name":"2rio",
-            "icon":"/static/288dcd9dc6dc1ad762c0a633f440df3a/2rios.png"
+            "image":"../images/brands/2rios.png"
         },{
             "name":"kalua",
-            "icon":"/static/e675b528fd0a8c3fd3a8cb3b8c389cdc/kalua.jpg"  
+            "image":"../images/brands/kalua.jpg"  
         },{
             "name":"kyly",
-            "icon":"/static/58c9e97aa7c889ad3393152332164ba4/kyly2.jpg"
+            "image":"../images/brands/kyly2.jpg"
         },{
             "name":"malwee",
-            "icon":"/static/dddf6ff97a1e5732cdf9a3e94f364bc2/malwee.png"  
+            "image":"../images/brands/malwee.png"  
         },{
             "name":"ronina",
-            "icon":"/static/f74bfae7d3de1c33d9442192f6ae4e3e/rondina.png"  
+            "image":"../images/brands/rondina.png"  
         },{
             "name":"plié",
-            "icon":"/static/4dfe4c9f159af86eb32e6e99e8a4f5dc/plié.png"
+            "image":"../images/brands/plié.png"
         }
     ]
 }

@@ -8,7 +8,6 @@ const Cataloge=()=>{
             dataJson {
                 categories {
                     name
-                    icon
                 }
             }
           }

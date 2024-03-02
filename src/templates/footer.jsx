@@ -9,7 +9,6 @@ const Footer=()=>{
             dataJson {
                 categories {
                     name
-                    icon
                 }
             }
           }

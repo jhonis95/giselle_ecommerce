@@ -60,10 +60,10 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "name": "categories_icons",
+        "name": "brands",
         "path": "./src/images/brands"
       },
-      __key: "categories_icons"
+      __key: "brands_images"
     }
   ]
 };

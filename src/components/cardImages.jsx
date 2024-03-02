@@ -25,6 +25,7 @@ const CardImages=({img1,img2,brand})=>{
                             className=" w-full h-[347px]"
                             objectFit="fill"
                             layout="constrained"
+                            loading="lazy"
                         />
 
                     </div>
@@ -41,6 +42,7 @@ const CardImages=({img1,img2,brand})=>{
                             className=" object-fill w-full h-[347px]"
                             objectFit="fill"
                             layout="constrained"
+                            loading="lazy"
                         />
                     </div>
                     <div className=" absolute right-4 bottom-4 bg-pink-300 w-[72px] h-[53px] flex justify-center items-center">
