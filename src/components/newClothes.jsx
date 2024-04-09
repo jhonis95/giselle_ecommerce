@@ -6,26 +6,26 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const NewClothes=()=>{
     const newProducts= useStaticQuery(graphql`
-        query newProducts {
-            allStrapiProduct {
-              nodes {
-                price
-                name
-                ref_store {
-                  Name
-                }
-                image {
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData
-                    }
-                  }
+    query newProducts {
+        allStrapiProduct {
+          nodes {
+            price
+            name
+            ref_store {
+              Name
+            }
+            image {
+              localFile {
+                childImageSharp {
+                  gatsbyImageData
                 }
               }
             }
+          }
         }
-      `
-    )
+    }
+  `
+)
     
     const [newClothes,setNewClothes]=useState(newProducts.allStrapiProduct.nodes)
 
