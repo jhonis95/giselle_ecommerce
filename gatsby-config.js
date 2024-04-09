@@ -1,16 +1,15 @@
-const { populate } = require('dotenv');
-
 /**
  * @type {import('gatsby').GatsbyConfig}
  * 
  */
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
 const strapiConfig = {
-  apiURL: "https://5e6f-2804-14d-1a87-cd01-e9a8-269e-8d4b-791.ngrok-free.app",
-  token: "f164a1023175ba7ef79217b0be36a3616244eace984c67385e96590ec0e0081ae12fdb4d40ca90563c2669ba3ab156ffb2dcf7c8376265b52929c38442105397be3ad3c3637d32aa0c24bb8b0c66c6e9c16284eeb9c4ac0ad96a4a7889512752d7e2ee71fb2589567658746fa8aa3f021d32ebfcadb520c6ff2fd1dcc12d2082",
+  apiURL: process.env.STRAPI_API_URL,
+  token: process.env.STRAPI_TOKEN,
   collectionTypes: [{
       singularName:"product",
       queryParams:{
